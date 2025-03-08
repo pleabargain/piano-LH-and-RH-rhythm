@@ -1,3 +1,6 @@
+# repo
+https://github.com/pleabargain/piano-LH-and-RH-rhythm
+
 # Piano Rhythm Generator
 
 A simple JavaScript tool for generating piano practice rhythm exercises for both left and right hands.
