@@ -1,0 +1,11 @@
+{
+  "name": "Basic Alternating Hands",
+  "difficulty": 1,
+  "numBeats": 4,
+  "pattern": {
+    "rh": [true, false, true, false],
+    "lh": [false, true, false, true]
+  },
+  "comments": "Great for beginners. Practice slowly at first, focusing on clean transitions between hands.",
+  "timestamp": "2025-03-08T10:15:30.000Z"
+}

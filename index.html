@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Rhythm Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Piano Rhythm Generator</h1>
+        
+        <div class="controls">
+            <div class="difficulty-control">
+                <label for="difficulty">Difficulty: <span id="difficulty-value">1</span></label>
+                <input type="range" id="difficulty" min="1" max="5" value="1">
+            </div>
+            <button id="generate-btn">Generate New Pattern</button>
+            <button id="save-btn">Save Image</button>
+            <button id="save-json-btn">Save as JSON</button>
+            <div class="file-input-container">
+                <input type="file" id="load-pattern" accept=".json" style="display: none;">
+                <button id="load-pattern-btn">Load Pattern</button>
+            </div>
+        </div>
+        
+        <div class="pattern-details">
+            <div class="pattern-name-container">
+                <label for="pattern-name">Pattern Name:</label>
+                <input type="text" id="pattern-name" placeholder="Enter a name for this pattern">
+            </div>
+            
+            <div class="comment-section">
+                <label for="pattern-comments">Comments:</label>
+                <textarea id="pattern-comments" placeholder="Add notes about this pattern..."></textarea>
+            </div>
+        </div>
+        
+        <div class="metronome-controls">
+            <h3>Metronome</h3>
+            <div class="tempo-control">
+                <label for="tempo">Tempo: <span id="tempo-value">60</span> BPM</label>
+                <input type="range" id="tempo" min="40" max="208" value="60" step="4">
+            </div>
+            <div class="metronome-buttons">
+                <button id="metronome-start">Start</button>
+                <button id="metronome-stop" disabled>Stop</button>
+            </div>
+        </div>
+        
+        <div class="rhythm-display">
+            <div class="exercise" id="exercise-container">
+                <div class="pattern-title" id="pattern-title">Unnamed Pattern</div>
+                <div class="exercise-grid">
+                    <div class="exercise-number">#1</div>
+                    <div class="grid" id="rhythm-grid">
+                        <div class="row header-row">
+                            <div class="cell header">RH</div>
+                            <!-- Beat cells will be generated dynamically -->
+                        </div>
+                        <div class="row">
+                            <div class="cell header">LH</div>
+                            <!-- Beat cells will be generated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

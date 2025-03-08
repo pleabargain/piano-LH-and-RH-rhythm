@@ -1,0 +1,29 @@
+{
+  "name": "sad and repeitive",
+  "difficulty": 5,
+  "numBeats": 8,
+  "pattern": {
+    "rh": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false
+    ],
+    "lh": [
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  "comments": "",
+  "timestamp": "2025-03-08T10:15:27.253Z"
+}

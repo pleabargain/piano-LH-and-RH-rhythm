@@ -1,0 +1,258 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin: 15px 0;
+    color: #333;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Pattern Details */
+.pattern-details {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Metronome Controls */
+.metronome-controls {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.metronome-controls h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.tempo-control {
+    margin-bottom: 15px;
+}
+
+.metronome-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.pattern-name-container {
+    margin-bottom: 15px;
+}
+
+.pattern-name-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.comment-section {
+    margin-bottom: 15px;
+}
+
+.comment-section textarea {
+    width: 100%;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.pattern-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.difficulty-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #003d82;
+}
+
+/* Rhythm Display */
+.rhythm-display {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.exercise {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exercise-grid {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.exercise-number {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.grid {
+    border: 2px solid #000;
+    display: inline-block;
+    overflow-x: auto; /* Allow horizontal scrolling for many beats */
+    max-width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header {
+    background-color: #f0f0f0;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
+
+/* Active and Inactive Beats */
+.active {
+    color: #000;
+}
+
+.inactive {
+    color: #aaa;
+}
+
+/* Metronome Beat Highlighting */
+.current-beat {
+    animation: pulse 0.5s ease-in-out;
+    box-shadow: 0 0 12px #ff5722 inset;
+    background-color: rgba(255, 152, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cell {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .grid {
+        max-width: 90vw;
+        overflow-x: auto;
+    }
+    
+    .pattern-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cell {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}

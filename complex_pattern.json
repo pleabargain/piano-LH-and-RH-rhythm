@@ -1,0 +1,11 @@
+{
+  "name": "Complex Polyrhythm Study",
+  "difficulty": 5,
+  "numBeats": 8,
+  "pattern": {
+    "rh": [true, true, false, true, true, false, true, false],
+    "lh": [true, false, true, false, true, true, false, true]
+  },
+  "comments": "Advanced pattern for developing polyrhythmic skills. Break down into smaller sections if needed. Aim for evenness between all active beats.",
+  "timestamp": "2025-03-08T16:45:30.000Z"
+}
